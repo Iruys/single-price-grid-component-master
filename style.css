@@ -1,0 +1,141 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+  /* Colors */
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+
+  /* Typography */
+  --body-font-size: 16px;
+  --body-font-family: 'Karla', sans-serif;
+  --body-font-weight-normal: 400;
+  --body-font-weight-bold: 700;
+}
+*,*::before,*::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-size: var(--body-font-size);
+  font-family: var(--body-font-family);
+  background-color: var(--light-gray);
+}
+.card{
+  max-width: 1440px;
+  
+ 
+}
+.row{
+  max-width: 700px;
+  margin: 110px auto;
+  padding: 10px;
+  display: grid;
+
+ 
+}
+.card .top-side{
+  padding: 45px;
+  background-color: white;
+  display: grid;
+  gap: 20px;
+  border-radius: 10px 10px 0 0 ;
+ 
+}
+
+.card .top-side h2{
+  color: var(--cyan);
+}
+.card .top-side .yellowgreen{
+  color: var(--bright-yellow);
+  font-weight: var(--body-font-weight-bold);
+}
+.card .top-side p {
+ color: var(--grayish-blue);
+}
+
+.card .flex{
+ display: grid;
+ grid-template-columns: repeat(2,1fr);
+
+ 
+}
+.card .left-side{
+  border-radius: 0 0 0 10px;
+  background-color:var(--cyan) ;
+  padding: 45px;
+  color: white;
+  display: grid;
+  gap: 14px;
+}
+.card .left-side .price{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.card .left-side .price h1{
+  font-size: 30px;
+}
+.card .left-side .price p{
+  color:rgb(237, 231, 231);
+}
+.card .left-side .text{
+  color:rgb(237, 231, 231);
+  margin-bottom: 10px;
+ 
+}
+.card .left-side button{
+  background-color: var(--bright-yellow);
+  border: none;
+  color: white;
+  padding: 15px;
+  font-weight: var(--body-font-weight-bold);
+  border-radius: 7px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.card .left-side button:hover{
+  background-color: hsl(71, 77%, 65%);
+}
+.card .right-side{
+  background-color:rgb(73, 190, 189) ;
+  padding: 45px;
+  border-radius: 0 0 10px 0;
+  color: white;
+  display: grid;
+}
+.card .right-side p{
+  max-width: 80%;
+  color:rgb(237, 231, 231);
+}
+
+@media(max-width:651px){
+  .row{
+    max-width: 700px;
+    margin: 0px auto;
+    padding: 10px;
+    display: grid;
+  
+   
+  }
+  .card .flex{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+   }
+   .card .right-side{
+   
+    border-radius: 0 0 10px 10px;
+    
+  }
+  .card .left-side{
+   
+    border-radius: 0 0 0 0;
+    
+  }
+  .card .right-side h3{
+    margin-bottom: 10px;
+  }
+}
